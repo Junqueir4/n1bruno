@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* Container dos personagens */
+.characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Estilo dos cards de personagem */
+.character-card {
+  background: linear-gradient(145deg, #111, #1d1d1d);
+  border-radius: 15px;
+  box-shadow: 10px 20px 100px #111, -5px -5px 15px #8e8e8e;
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 20px #111, -8px -8px 20px #2b2b2b;
+}
+
+/* Imagem do personagem */
+.character-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Nome do personagem */
+.character-card h3 {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin: 5px 0;
+}
+
+.character-card p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Barra de pesquisa */
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 12px;
+  width: 300px;
+  border: none;
+  border-radius: 20px;
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-input:focus {
+  background-color: #383838;
+}
+
+/* Botão de pesquisa */
+.search-btn {
+  background-color: #3a9168;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background-color: #2f7354;
+}
+
+/* Botão de alternar lista de feitiços */
+.toggle-btn {
+  margin: 20px auto;
+  padding: 12px 20px;
+  background-color: #3a9168;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Container dos feitiços */
+.spells-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.spells-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Separador por letra dos feitiços */
+.spell-group {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  color: #3a9168;
+  font-weight: bold;
+}
+
+/* Estilo dos cards de feitiços */
+.spell-card {
+  background: linear-gradient(145deg, #2b2b2b, #1c1c1c);
+  border-radius: 12px;
+  box-shadow: 3px 3px 8px #111, -3px -3px 8px #2b2b2b;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.spell-card:hover {
+  transform: scale(1.05);
+}
+
+.spell-card h2 {
+  color: #3a9168;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.spell-card p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .characters-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-card {
+    width: 90%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .spells-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
